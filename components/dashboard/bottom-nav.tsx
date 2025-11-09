@@ -6,6 +6,8 @@ import { AutoHeightCollapse } from "@/lib/utils";
 
 export function BottomNav() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [selectedMenuItem, setSelectedMenuItem] = useState<number>(1);
+
   const barRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -61,14 +63,17 @@ export function BottomNav() {
         tabIndex={-1}
       />
 
-      <div className="w-full z-50 bg-white">
+      <div className="w-full relative z-50 bg-white">
         {/* Expanded Menu (auto-height via measurement) */}
         <AutoHeightCollapse isOpen={isExpanded}>
           <div className="grid grid-cols-5 gap-2 px-3 py-3 border-b border-sidebar-border">
-            {menuItems.map((item, idx) => (
+            {menuItems.map((item) => (
               <button
-                key={idx}
-                className="flex flex-col items-center gap-1 py-2 text-sidebar-foreground hover:text-sidebar-primary transition-colors"
+                key={item.order}
+                className={`flex flex-col items-center gap-1 py-3 px-2.5 rounded-sm cursor-pointer hover:bg-logo-blue/10 text-sidebar-foreground hover:text-sidebar-primary transition-colors ${
+                  selectedMenuItem === item.order && "bg-logo-blue/10"
+                }`}
+                onClick={() => setSelectedMenuItem(item.order)}
               >
                 <item.icon size={20} />
                 <span className="text-xs">{item.label}</span>
@@ -83,22 +88,25 @@ export function BottomNav() {
           className={`flex items-center justify-around p-3 transition-all duration-300
           ${
             isExpanded
-              ? "opacity-0 translate-y-4 pointer-events-none hidden"
-              : "opacity-100 translate-y-0 pointer-events-auto"
+              ? "invisible h-0 overflow-hidden translate-y-4 pointer-events-none"
+              : "visible h-auto translate-y-0 pointer-events-auto"
           }`}
           aria-hidden={isExpanded}
         >
-          {menuItems.slice(0, 4).map((item, idx) => (
+          {menuItems.slice(0, 4).map((item) => (
             <button
-              key={idx}
-              className="p-2 text-sidebar-foreground hover:text-sidebar-primary transition-colors"
+              key={item.order}
+              className={`p-3 text-sidebar-foreground rounded-sm cursor-pointer hover:bg-logo-blue/10  hover:text-sidebar-primary transition-colors ${
+                selectedMenuItem === item.order && "bg-logo-blue/10"
+              }`}
+              onClick={() => setSelectedMenuItem(item.order)}
             >
               <item.icon size={24} />
             </button>
           ))}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className={`p-2 transition-colors ${
+            className={`p-2 transition-colors rounded cursor-pointer hover:bg-logo-blue/10 ${
               isExpanded
                 ? "text-sidebar-primary"
                 : "text-sidebar-foreground hover:text-sidebar-primary"
