@@ -31,33 +31,36 @@ Since only one page was required, slight design adaptations were made to improve
 
 ## 🧩 Project Structure
 
+## Project Structure
+
+```bash
 karan-soni-uniqus-assignment/
 ├─ app/
-│ ├─ favicon.ico
-│ ├─ globals.css
-│ ├─ layout.tsx
-│ └─ page.tsx
+│  ├─ favicon.ico
+│  ├─ globals.css
+│  ├─ layout.tsx
+│  └─ page.tsx
 ├─ components/
-│ └─ dashboard/
-│ ├─ bottom-nav.tsx
-│ ├─ messages-sidebar.tsx
-│ ├─ sales-table.tsx
-│ ├─ sidebar.tsx
-│ ├─ top-header.tsx
-│ └─ top-metrics.tsx
+│  └─ dashboard/
+│     ├─ bottom-nav.tsx
+│     ├─ messages-sidebar.tsx
+│     ├─ sales-table.tsx
+│     ├─ sidebar.tsx
+│     ├─ top-header.tsx
+│     └─ top-metrics.tsx
 ├─ hooks/
-│ └─ use-mobile.ts
+│  └─ use-mobile.ts
 ├─ lib/
-│ ├─ dashboardData.json
-│ ├─ data-provider.tsx
-│ └─ utils.tsx
+│  ├─ dashboardData.json
+│  ├─ data-provider.tsx
+│  └─ utils.tsx
 ├─ public/
-│ ├─ AccountSettings.jpg
-│ ├─ Macbook.jpg
-│ ├─ assets.tsx
-│ └─ brand-logo.png
+│  ├─ AccountSettings.jpg
+│  ├─ Macbook.jpg
+│  ├─ assets.tsx
+│  └─ brand-logo.png
 ├─ types/
-│ └─ dashboard.ts
+│  └─ dashboard.ts
 ├─ .gitignore
 ├─ eslint.config.mjs
 ├─ next.config.ts
@@ -65,6 +68,7 @@ karan-soni-uniqus-assignment/
 ├─ postcss.config.mjs
 ├─ tsconfig.json
 └─ README.md
+```
 
 ---
 
