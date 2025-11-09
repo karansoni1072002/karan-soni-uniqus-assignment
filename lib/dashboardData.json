@@ -1,0 +1,243 @@
+{
+  "metrics": [
+    {
+      "label": "New sales",
+      "value": "1.345",
+      "icon": "Briefcase",
+      "bgColor": "#E8F0FE",
+      "iconColor": "#5191ff"
+    },
+    {
+      "label": "New leads",
+      "value": "2.890",
+      "icon": "Coins",
+      "bgColor": "#FFF4E5",
+      "iconColor": "#ffb14c"
+    },
+    {
+      "label": "Income per lead",
+      "value": "$1.870",
+      "icon": "Calendar",
+      "bgColor": "#d6d6d6",
+      "iconColor": "#a5a5a5"
+    },
+    {
+      "label": "Conversion rate",
+      "value": "5.10%",
+      "icon": "TrendingUp",
+      "bgColor": "#F3E5F5",
+      "iconColor": "#de82ed"
+    }
+  ],
+  "sales": [
+    {
+      "id": "10-3290-08",
+      "productName": "Macbook Pro",
+      "productImage": "/placeholder.svg?height=40&width=40",
+      "customerId": "10-3290-08",
+      "customerName": "Rodney Cannon",
+      "email": "rodney.cannon@gmail.com",
+      "delivery": "United Kingdom",
+      "city": "193 Cole Plains Suite 649",
+      "country": "891205",
+      "subtotal": 100,
+      "shipping": 18,
+      "total": 118,
+      "status": "Shipped"
+    },
+    {
+      "id": "10-3456-18",
+      "productName": "Dell Laptop",
+      "productImage": "/placeholder.svg?height=40&width=40",
+      "customerId": "10-3456-18",
+      "customerName": "Mike Franklin",
+      "email": "mike.franklin@gmail.com",
+      "delivery": "United States",
+      "city": "619 Jeffrey Freeway Apt. 273",
+      "country": "USA",
+      "subtotal": 180,
+      "shipping": 28,
+      "total": 208,
+      "status": "Processing"
+    },
+    {
+      "id": "10-3786-23",
+      "productName": "Macbook Air",
+      "productImage": "/placeholder.svg?height=40&width=40",
+      "customerId": "10-3786-23",
+      "customerName": "Louis Franklin",
+      "email": "louis.franklin@gmail.com",
+      "delivery": "Germany",
+      "city": "200 Davis Estates Suite 621",
+      "country": "Germany",
+      "subtotal": 100,
+      "shipping": 18,
+      "total": 118,
+      "status": "Processing"
+    },
+    {
+      "id": "10-4570-15",
+      "productName": "Macbook",
+      "productImage": "/placeholder.svg?height=40&width=40",
+      "customerId": "10-4570-15",
+      "customerName": "Dominic Love",
+      "email": "dominic.love@gmail.com",
+      "delivery": "Spain",
+      "city": "742 Rau Summit Suite 407",
+      "country": "Spain",
+      "subtotal": 560,
+      "shipping": 18,
+      "total": 578,
+      "status": "Shipped"
+    },
+    {
+      "id": "10-5468-19",
+      "productName": "LG Laptop",
+      "productImage": "/placeholder.svg?height=40&width=40",
+      "customerId": "10-5468-19",
+      "customerName": "Adrian Drake",
+      "email": "adrian.drake@gmail.com",
+      "delivery": "United Kingdom",
+      "city": "166 Corkery Vista Apt. 293",
+      "country": "UK",
+      "subtotal": 340,
+      "shipping": 34,
+      "total": 374,
+      "status": "Cancelled"
+    },
+    {
+      "id": "10-4890-14",
+      "productName": "Macbook Pro",
+      "productImage": "/placeholder.svg?height=40&width=40",
+      "customerId": "10-4890-14",
+      "customerName": "Walter Quinn",
+      "email": "walter.quinn@gmail.com",
+      "delivery": "United States",
+      "city": "7613 Wiffredo Rapids Apt. 715",
+      "country": "USA",
+      "subtotal": 180,
+      "shipping": 40,
+      "total": 220,
+      "status": "Shipped"
+    },
+    {
+      "id": "10-3290-09",
+      "productName": "Macbook Pro",
+      "productImage": "/placeholder.svg?height=40&width=40",
+      "customerId": "10-3290-09",
+      "customerName": "Victor Roberson",
+      "email": "victor.roberson@gmail.com",
+      "delivery": "Germany",
+      "city": "357 Hoeger Bypass Apt. 593",
+      "country": "Germany",
+      "subtotal": 680,
+      "shipping": 18,
+      "total": 698,
+      "status": "Shipped"
+    },
+    {
+      "id": "10-3290-10",
+      "productName": "Macbook Pro",
+      "productImage": "/placeholder.svg?height=40&width=40",
+      "customerId": "10-3290-09",
+      "customerName": "Victor Roberson",
+      "email": "victor.roberson@gmail.com",
+      "delivery": "Germany",
+      "city": "357 Hoeger Bypass Apt. 593",
+      "country": "Germany",
+      "subtotal": 680,
+      "shipping": 18,
+      "total": 698,
+      "status": "Shipped"
+    },
+    {
+      "id": "10-3290-11",
+      "productName": "Macbook Pro",
+      "productImage": "/placeholder.svg?height=40&width=40",
+      "customerId": "10-3290-09",
+      "customerName": "Victor Roberson",
+      "email": "victor.roberson@gmail.com",
+      "delivery": "Germany",
+      "city": "357 Hoeger Bypass Apt. 593",
+      "country": "Germany",
+      "subtotal": 680,
+      "shipping": 18,
+      "total": 698,
+      "status": "Shipped"
+    },
+    {
+      "id": "10-3290-12",
+      "productName": "Macbook Pro",
+      "productImage": "/placeholder.svg?height=40&width=40",
+      "customerId": "10-3290-09",
+      "customerName": "Victor Roberson",
+      "email": "victor.roberson@gmail.com",
+      "delivery": "Germany",
+      "city": "357 Hoeger Bypass Apt. 593",
+      "country": "Germany",
+      "subtotal": 680,
+      "shipping": 18,
+      "total": 698,
+      "status": "Shipped"
+    }
+  ],
+  "conversionData": {
+    "day": [
+      { "name": "12am", "value": 4200 },
+      { "name": "1am", "value": 4300 },
+      { "name": "2am", "value": 3800 },
+      { "name": "3am", "value": 4100 },
+      { "name": "4am", "value": 3900 },
+      { "name": "5am", "value": 4200 },
+      { "name": "6am", "value": 4500 }
+    ],
+    "week": [
+      { "name": "Mon", "value": 5200 },
+      { "name": "Tue", "value": 5900 },
+      { "name": "Wed", "value": 4800 },
+      { "name": "Thu", "value": 5700 },
+      { "name": "Fri", "value": 6200 },
+      { "name": "Sat", "value": 5900 },
+      { "name": "Sun", "value": 6500 }
+    ],
+    "month": [
+      { "name": "Jan", "value": 4200 },
+      { "name": "Feb", "value": 4700 },
+      { "name": "Mar", "value": 5100 },
+      { "name": "Apr", "value": 5800 },
+      { "name": "May", "value": 6200 },
+      { "name": "Jun", "value": 5900 },
+      { "name": "Jul", "value": 6800 }
+    ]
+  },
+  "messages": [
+    {
+      "id": "1",
+      "name": "Nicholas Gordon",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "message": "Makeover the striking, brilliant and vivid colors",
+      "time": "10m"
+    },
+    {
+      "id": "2",
+      "name": "Nina Perkins",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "message": "In the history of modern astromony, there is small",
+      "time": "1hr"
+    },
+    {
+      "id": "3",
+      "name": "Daniel Holland",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "message": "Advertising on a budget with a monthly frequency",
+      "time": "2hr"
+    },
+    {
+      "id": "4",
+      "name": "Franklin Thomas",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "message": "In the history of modern astromony, there is small",
+      "time": "3hrs"
+    }
+  ]
+}

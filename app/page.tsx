@@ -1,65 +1,76 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { useState } from "react";
+import { DashboardProvider, useDashboardData } from "@/lib/data-provider";
+import { Sidebar } from "@/components/dashboard/sidebar";
+import { TopHeader } from "@/components/dashboard/top-header";
+import { TopMetrics } from "@/components/dashboard/top-metrics";
+import { SalesTable } from "@/components/dashboard/sales-table";
+import { MessagesSidebar } from "@/components/dashboard/messages-sidebar";
+import { BottomNav } from "@/components/dashboard/bottom-nav";
+
+function DashboardContent() {
+  const { metrics, sales, conversionData, messages } = useDashboardData();
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
+  const [isMessageSidebarOpen, setIsMessageSidebarOpen] = useState(true);
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="flex h-dvh bg-background overflow-hidden">
+      {/* Desktop Sidebar - Hidden on mobile, 80px on tablet, 250px on desktop */}
+      <div className="hidden md:block">
+        <Sidebar
+          isCollapsed={sidebarCollapsed}
+          isMessageSidebarOpen={isMessageSidebarOpen}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+      </div>
+
+      {isMessageSidebarOpen && (
+        <div className="hidden lg:block">
+          <MessagesSidebar
+            messages={messages}
+            setSidebarCollapsed={setSidebarCollapsed}
+            setIsMessageSidebarOpen={setIsMessageSidebarOpen}
+          />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+      )}
+
+      {/* Main Content Area */}
+      <div className="flex-1 flex flex-col overflow-hidden">
+        <TopHeader
+          onMenuToggle={() => setSidebarCollapsed(!sidebarCollapsed)}
+        />
+
+        {/* Scrollable Content */}
+        <div className="flex-1 bg-background2 overflow-y-auto pb-20 md:pb-0 flex">
+          <main className="px-4 py-2 space-y-6 w-full">
+            {/* Top Metrics - Grid adjusted: 1 col mobile, 2 cols tablet, 4 cols desktop */}
+            <TopMetrics metrics={metrics} />
+
+            {/* Sales Table */}
+            <div>
+              <SalesTable sales={sales} />
+            </div>
+            <div
+              className="md:hidden"
+              style={{
+                height:
+                  "calc(var(--bottom-nav-bar-h, 48px) + env(safe-area-inset-bottom))",
+              }}
+              aria-hidden
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </main>
         </div>
-      </main>
+      </div>
+
+      {/* Mobile Bottom Navigation */}
+      <BottomNav />
     </div>
+  );
+}
+
+export default function Dashboard() {
+  return (
+    <DashboardProvider>
+      <DashboardContent />
+    </DashboardProvider>
   );
 }
