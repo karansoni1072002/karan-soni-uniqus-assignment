@@ -51,7 +51,7 @@ export function BottomNav() {
       {/* Backdrop */}
       <button
         onClick={() => setIsExpanded(false)}
-        className={`fixed inset-0 bg-black/30 backdrop-blur-[1px] transition-opacity duration-300 z-40
+        className={`fixed inset-0 bg-black/30 backdrop-blur-[1px] transition-opacity duration-300 z-20
           ${
             isExpanded
               ? "opacity-100 pointer-events-auto"

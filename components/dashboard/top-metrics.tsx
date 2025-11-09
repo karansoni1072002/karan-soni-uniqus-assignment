@@ -22,7 +22,7 @@ export function TopMetrics({ metrics }: MetricsProps) {
         return (
           <div
             key={idx}
-            className="bg-white rounded-lg px-2 py-4 md:p-6 min-w-36 flex-none"
+            className="bg-white rounded-lg px-2 py-4 md:p-6 min-w-36 w-full"
           >
             <div className="flex flex-col-reverse md:flex-row items-center md:items-start justify-between gap-2">
               <div className="flex flex-col-reverse md:flex-col md:gap-2 items-center">

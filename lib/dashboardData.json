@@ -181,35 +181,6 @@
       "status": "Shipped"
     }
   ],
-  "conversionData": {
-    "day": [
-      { "name": "12am", "value": 4200 },
-      { "name": "1am", "value": 4300 },
-      { "name": "2am", "value": 3800 },
-      { "name": "3am", "value": 4100 },
-      { "name": "4am", "value": 3900 },
-      { "name": "5am", "value": 4200 },
-      { "name": "6am", "value": 4500 }
-    ],
-    "week": [
-      { "name": "Mon", "value": 5200 },
-      { "name": "Tue", "value": 5900 },
-      { "name": "Wed", "value": 4800 },
-      { "name": "Thu", "value": 5700 },
-      { "name": "Fri", "value": 6200 },
-      { "name": "Sat", "value": 5900 },
-      { "name": "Sun", "value": 6500 }
-    ],
-    "month": [
-      { "name": "Jan", "value": 4200 },
-      { "name": "Feb", "value": 4700 },
-      { "name": "Mar", "value": 5100 },
-      { "name": "Apr", "value": 5800 },
-      { "name": "May", "value": 6200 },
-      { "name": "Jun", "value": 5900 },
-      { "name": "Jul", "value": 6800 }
-    ]
-  },
   "messages": [
     {
       "id": "1",
